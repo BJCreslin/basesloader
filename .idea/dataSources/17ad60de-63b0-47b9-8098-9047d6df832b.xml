@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="albertdatabase@bjcreslin.ru">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>9.5.14</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="albertbase">
+      <ObjectId>16391</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="albertdatabase">
+      <ObjectId>16684</ObjectId>
+      <Owner>albertbaseuser</Owner>
+      <IntrospectionStateNumber>24</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="hibernatetest">
+      <ObjectId>16480</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="postgres">
+      <ObjectId>12377</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>24</IntrospectionStateNumber>
+    </database>
+    <role id="6" parent="1" name="albertbaseuser">
+      <ObjectId>16683</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="baseuser">
+      <ObjectId>16384</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="9" parent="3" name="information_schema">
+      <ObjectId>12085</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="10" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="11" parent="3" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="12" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="13" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="14" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-12-26.16:29:45.309</IntrospectionTimestamp>
+      <IntrospectionStateNumber>7845</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="15" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+    </access-method>
+    <access-method id="16" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+    </access-method>
+    <access-method id="17" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+    </access-method>
+    <access-method id="18" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+    </access-method>
+    <access-method id="19" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+    </access-method>
+    <access-method id="20" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+    </access-method>
+    <sequence id="21" parent="14" name="hibernate_sequence">
+      <ObjectId>16737</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7845</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="22" parent="14" name="groupitem_id_seq">
+      <ObjectId>16697</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7838</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="23" parent="14" name="tablelogist_id_seq">
+      <ObjectId>16685</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7836</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="24" parent="14" name="groupitem">
+      <ObjectId>16699</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7840</StateNumber>
+    </table>
+    <table id="25" parent="14" name="neededtable">
+      <ObjectId>16728</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7844</StateNumber>
+    </table>
+    <table id="26" parent="14" name="tableitem">
+      <ObjectId>16714</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7844</StateNumber>
+    </table>
+    <table id="27" parent="14" name="tablelogist">
+      <ObjectId>16687</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>7838</StateNumber>
+    </table>
+    <column id="28" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>7838</StateNumber>
+      <DefaultExpression>nextval(&apos;groupitem_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>groupitem_id_seq</SequenceName>
+    </column>
+    <column id="29" parent="24" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>7838</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="24" name="logist">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>7838</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="31" parent="24" name="groupitem_id_uindex">
+      <ObjectId>16713</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="32" parent="24" name="groupitem_pkey">
+      <ObjectId>16706</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="24" name="groupitem_pkey">
+      <ObjectId>16707</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>groupitem_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="24" name="logist">
+      <ObjectId>16708</ObjectId>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <ColNames>logist</ColNames>
+      <RefTableId>16687</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>tablelogist</RefTableName>
+      <RefKeyName>tablelogist_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="35" parent="25" name="code">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>7842</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="36" parent="25" name="quantity">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>7842</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="37" parent="25" name="neededtable_code_uindex">
+      <ObjectId>16731</ObjectId>
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <foreign-key id="38" parent="25" name="code">
+      <ObjectId>16732</ObjectId>
+      <ColNames>code</ColNames>
+      <RefTableId>16714</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>tableitem</RefTableName>
+      <RefKeyName>tableitem_pkey</RefKeyName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="39" parent="26" name="code">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>7840</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="40" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>7840</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="26" name="comment">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>7840</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="26" name="surrogate">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>7840</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="43" parent="26" name="groupitem">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>7840</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="44" parent="26" name="tableitem_code_uindex">
+      <ObjectId>16727</ObjectId>
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="45" parent="26" name="tableitem_pkey">
+      <ObjectId>16720</ObjectId>
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="26" name="tableitem_pkey">
+      <ObjectId>16721</ObjectId>
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>tableitem_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="26" name="tableitem_groupitem_id_fk">
+      <ObjectId>16722</ObjectId>
+      <Deferrable>1</Deferrable>
+      <ColNames>groupitem</ColNames>
+      <RefTableId>16699</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>groupitem</RefTableName>
+      <RefKeyName>groupitem_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="48" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>7836</StateNumber>
+      <DefaultExpression>nextval(&apos;tablelogist_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>tablelogist_id_seq</SequenceName>
+    </column>
+    <column id="49" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>7836</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="27" name="family">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>7836</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="27" name="email">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>7836</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="27" name="phonenumber">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>7836</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="53" parent="27" name="tablelogist_id_uindex">
+      <ObjectId>16696</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="54" parent="27" name="tablelogist_pkey">
+      <ObjectId>16694</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="27" name="tablelogist_pkey">
+      <ObjectId>16695</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>tablelogist_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
