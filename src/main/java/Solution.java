@@ -7,12 +7,26 @@ import java.util.Map;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+/***
+ * Программа для вычисления данных для перемещения. Из Центральный на выставка в офисе.
+ * по данным XLS файлов
+ */
+
+
 public class Solution {
     public static void main(String[] args) {
 
+//Если надо записать в файл
+        startToTxtFile();
+
+
+    }
+
+    private static void startToTxtFile() {
         List<ItemTable> itemTableList = ReadItemNeededXLS.getItemList();
         List<ItemTable> itemTableListStock = ReadItemStockXLS.getItemList();
-        Logger.getAnonymousLogger().info("xls "+Integer.toString(itemTableListStock.size()));
+        Logger.getAnonymousLogger().info("Количество данных в остатках " + Integer.toString(itemTableListStock.size()));
+        Logger.getAnonymousLogger().info("Количество данных в файле нужных остатков " + Integer.toString(itemTableListStock.size()));
 
 
         Map<Integer, ItemTable> itemTableMap = itemTableListStock.stream().collect(Collectors.toMap(x -> x.getCode(), x -> x));
@@ -52,11 +66,6 @@ public class Solution {
         Logger.getAnonymousLogger().info(Integer.toString(mapForTransfer.size()));
 
         WriteTXTFiles.saveTransferFile(mapForTransfer);
-
-
-        //  GroupeItemReadANDPump.actionFromList(itemTableList);
-        // NeededItemTableService.actionFromList(itemTableList);
-
     }
 
 
