@@ -22,7 +22,7 @@ public class TablelogistEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = -1)
+    @Column(name = "name", nullable = true, length = 50, insertable = true, updatable = true)
     public String getName() {
         return name;
     }
@@ -32,7 +32,7 @@ public class TablelogistEntity {
     }
 
     @Basic
-    @Column(name = "family", nullable = true, length = -1)
+    @Column(name = "family", nullable = true, insertable = true, updatable = true,length = 50)
     public String getFamily() {
         return family;
     }
@@ -42,7 +42,7 @@ public class TablelogistEntity {
     }
 
     @Basic
-    @Column(name = "email", nullable = true, length = -1)
+    @Column(name = "email", nullable = true, insertable = true, updatable = true, length = 50)
     public String getEmail() {
         return email;
     }
@@ -52,7 +52,7 @@ public class TablelogistEntity {
     }
 
     @Basic
-    @Column(name = "phonenumber", nullable = true, length = -1)
+    @Column(name = "phonenumber", nullable = true, insertable = true, updatable = true,length = 50)
     public String getPhonenumber() {
         return phonenumber;
     }

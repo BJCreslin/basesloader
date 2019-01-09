@@ -19,6 +19,13 @@ public class ItemTable {
     public ItemTable() {
     }
 
+    public ItemTable(int code, int quantityCentral, int quantityVystavka, String name) {
+        this.code=code;
+        this.central=quantityCentral;
+        this.vystavka=quantityVystavka;
+        this.name=name;
+    }
+
     @Override
     public String toString() {
         return "ItemTable{" +
