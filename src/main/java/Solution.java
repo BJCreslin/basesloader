@@ -17,7 +17,11 @@ public class Solution {
     public static void main(String[] args) {
 
 //Если надо записать в файл
-        startToTxtFile();
+         startToTxtFile();
+
+//Если надо записать в базу
+
+
 
 
     }
