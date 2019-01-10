@@ -5,11 +5,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tableitem", schema = "public", catalog = "albertdatabase")
 public class TableitemEntity {
-    private int code;
+    private int code;    /*Код такой же как и в 1С */
     private String name;
     private String comment;
-    private Integer surrogate;
+    private Integer surrogate;  /*Возможная Замена. код другого товара*/
     private GroupitemEntity groupitemByGroupitem;
+    private Integer cost;  /*Храним цены в рублях*/
 
     @Id
     @Column(name = "code", nullable = false)
@@ -45,6 +46,16 @@ public class TableitemEntity {
     @Column(name = "surrogate", nullable = true)
     public Integer getSurrogate() {
         return surrogate;
+    }
+
+    @Basic
+    @Column(name = "cost", nullable = true)
+    public Integer getCost() {
+        return cost;
+    }
+
+    public void setCost(Integer cost) {
+        this.cost = cost;
     }
 
     public void setSurrogate(Integer surrogate) {
